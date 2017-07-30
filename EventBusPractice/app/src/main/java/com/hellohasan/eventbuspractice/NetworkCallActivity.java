@@ -1,8 +1,8 @@
 package com.hellohasan.eventbuspractice;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 
 import com.hellohasan.eventbuspractice.RetrofitClass.ApiInterface;
@@ -17,6 +17,8 @@ import retrofit2.Response;
 
 public class NetworkCallActivity extends AppCompatActivity {
 
+    private final String myUrl = "https://raw.githubusercontent.com/hasancse91/EventBus-Android-Tutorial/master/Data/data.json";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,7 @@ public class NetworkCallActivity extends AppCompatActivity {
 
     public void buttonClicked(View view) {
         ApiInterface apiInterface = RetrofitApiClient.getClient().create(ApiInterface.class);
-        Call<ResponseBody> call = apiInterface.getDataFromServer("yourUrl");
+        Call<ResponseBody> call = apiInterface.getDataFromServer(myUrl);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {

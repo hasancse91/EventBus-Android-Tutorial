@@ -1,17 +1,9 @@
 package com.hellohasan.eventbuspractice;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import com.hellohasan.eventbuspractice.RetrofitClass.ApiInterface;
-import com.hellohasan.eventbuspractice.RetrofitClass.RetrofitApiClient;
-
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void buttonClicked(View view) {
-
-
+        startActivity(new Intent(this, NetworkCallActivity.class));
     }
 }
