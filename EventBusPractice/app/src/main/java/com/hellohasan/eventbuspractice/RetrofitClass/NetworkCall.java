@@ -30,6 +30,7 @@ public class NetworkCall {
             @Override
             public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
                 Logger.d("Failure: " + t.toString());
+                EventBus.getDefault().post(new DataReceiveEvent(Config.DATA_RECEIVED, t.toString()));
             }
         });
     }

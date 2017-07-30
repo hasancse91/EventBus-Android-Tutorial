@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView.setText("Response message from server: Not Received Yet");
     }
-    
+
     public void buttonClicked(View view) {
         startActivity(new Intent(this, NetworkCallActivity.class));
     }
