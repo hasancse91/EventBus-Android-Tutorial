@@ -17,13 +17,11 @@ import org.greenrobot.eventbus.ThreadMode;
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
-    private String responseString = "Response message from server: NOT RECEIVED YET";
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(DataReceiveEvent event) throws ClassNotFoundException {
         if (event.isTagMatchWith(Config.DATA_RECEIVED)) {
-            responseString = "Response message from server: " + event.getResponseMessage();
-            textView.setText(responseString);
+            textView.setText(event.getResponseMessage());
         }
     }
 
@@ -33,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = (TextView) findViewById(R.id.textView);
-        textView.setText(responseString);
+        textView.setText("NOT RECEIVED YET");
     }
 
     public void buttonClicked(View view) {
