@@ -1,4 +1,4 @@
-package com.hellohasan.eventbuspractice.RetrofitClass;
+package com.hellohasan.eventbuspractice.NetworkRelatedClass;
 
 import retrofit2.Retrofit;
 

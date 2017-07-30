@@ -1,9 +1,10 @@
-package com.hellohasan.eventbuspractice.RetrofitClass;
+package com.hellohasan.eventbuspractice.NetworkRelatedClass;
 
 import android.support.annotation.NonNull;
 
 import com.hellohasan.eventbuspractice.Model.DataReceiveEvent;
 import com.hellohasan.eventbuspractice.Util.Config;
+import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
 import org.greenrobot.eventbus.EventBus;
@@ -16,6 +17,7 @@ import retrofit2.Response;
 
 public class NetworkCall {
     public static void getData(){
+        Logger.addLogAdapter(new AndroidLogAdapter());
         String myUrl = "https://raw.githubusercontent.com/hasancse91/EventBus-Android-Tutorial/master/Data/data.json";
 
         ApiInterface apiInterface = RetrofitApiClient.getClient().create(ApiInterface.class);

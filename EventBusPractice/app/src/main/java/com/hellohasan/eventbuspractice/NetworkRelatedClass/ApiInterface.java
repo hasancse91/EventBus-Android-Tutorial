@@ -1,4 +1,4 @@
-package com.hellohasan.eventbuspractice.RetrofitClass;
+package com.hellohasan.eventbuspractice.NetworkRelatedClass;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
