@@ -4,7 +4,12 @@ import retrofit2.Retrofit;
 
 public class RetrofitApiClient {
 
-    private static final String BASE_URL = "http://54.255.242.140/";
+    /**
+        For this App we don't use base URL. Because we used dynamic URL
+        but we've to call .baseUrl(YOUR_BASE_URL) method with any URL.
+        So here I mentioned a fake URL.
+     */
+    private static final String BASE_URL = "http://your-base-url";
 
     private static Retrofit retrofit = null;
 

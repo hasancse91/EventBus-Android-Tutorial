@@ -14,7 +14,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
 public class NetworkCall {
     public static void getData(){
         Logger.addLogAdapter(new AndroidLogAdapter());
