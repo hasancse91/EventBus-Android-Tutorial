@@ -42,7 +42,7 @@ public class NetworkCall {
 }
 ```
 
-Inside the network callback methods I post an Event to cahnge update the UI (MainActivity). Now we have subscribe the event from `MainActivity.java` class.
+Inside the network callback methods I post an Event to cahnge update the UI (MainActivity). Now we have subscribe the event from `MainActivity.java` class. Inside the method we can change the Text of `TextView`.
 
 ```java
 @Subscribe(threadMode = ThreadMode.MAIN)
