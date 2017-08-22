@@ -1,6 +1,6 @@
 # EventBus Android Tutorial
 
-We'll design this type of sample Android App using [EventBus](https://github.com/google/guava/wiki/EventBusExplained) Android Library:
+We'll design this type of sample Android App using [EventBus](https://github.com/greenrobot/EventBus) Android Library:
 
 <img src="https://raw.githubusercontent.com/hasancse91/EventBus-Android-Tutorial/master/Data/eventbus-practice-tutorial.gif" width="250" height="444" />
 
